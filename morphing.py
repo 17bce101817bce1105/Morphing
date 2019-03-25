@@ -170,6 +170,11 @@ for i in range(args.k):
     #         break
 
 cv2.destroyAllWindows()
+filenames = ["boy0.jpg", "boy1.jpg", "boy2.jpg", "boy3.jpg", "boy4.jpg", "boy5.jpg", "boy6.jpg"]
+images = []
+for filename in filenames:
+    images.append(imageio.imread(filename))
+imageio.mimsave("final.gif", images)
 
 
 # cv2.imwrite(args.output_image_path, final_img)
